@@ -1,0 +1,16 @@
+{% extends 'index.html'%}
+{% block body  %}
+<body>
+<form action="/predict_post#about" method="post" enctype="multipart/form-data" name="form1">
+  <table class="table table-hover">
+    <tr>
+      <th scope="row">IMAGE</th>
+      <td><input class="form-control" type="file" name="file"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input class="btn btn-primary" type="submit" name="Submit" value="PREDICT"></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

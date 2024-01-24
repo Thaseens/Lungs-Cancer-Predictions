@@ -1,0 +1,40 @@
+{% extends 'index.html'%}
+{% block body  %}
+<body>
+<form name="form1" method="post" action="">
+  <table class="table table-hover">
+    <tr>
+      <th scope="row">RESULT</th>
+        {% if res==0 %}
+            <td>adenocarcinoma</td>
+        {% elif res==1 %}
+            <td>large.cell.carcinoma</td>
+        {% elif res==2 %}
+            <td>Normal</td>
+        {% elif res==3 %}
+            <td>squamous.cell.carcinoma</td>
+        {% else %}
+        <td></td>
+        {% endif %}
+    </tr>
+   <tr>
+      <th scope="row">SUGGESTION</th>
+        {% if res==0 %}
+            <td>Surgery, Chemotherapy, Radiation therapy</td>
+        {% elif res==1 %}
+            <td>Surgery, Chemotherapy, Radiation therapy, Targeted therapy, Immunotherapy</td>
+        {% elif res==2 %}
+            <td>Normal</td>
+        {% elif res==3 %}
+            <td>external beam radiation therapy (EBRT)</td>
+        {% else %}
+        <td></td>
+        {% endif %}
+    </tr>
+      <tr>
+          <td colspan="2" align="center"><a class="btn btn-primary" href="/predictt#about">CHECK NEW</a> </td>
+      </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
